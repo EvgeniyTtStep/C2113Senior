@@ -7,11 +7,8 @@ class Student:
         self.gladness = 50
         self.progress = 0
         self.alive = True
-        self.money = 1000
 
-    def to_work(self):
-        print("Time to work")
-        self.money += 10
+
 
     def to_study(self):
         print("Time to study")
@@ -26,7 +23,7 @@ class Student:
         print("Rest time")
         self.gladness += 5
         self.progress -= 0.1
-        self.money -= 100
+
 
     def is_alive(self):
         if self.progress < -0.5:
@@ -42,7 +39,7 @@ class Student:
     def end_of_day(self):
         print(f"Gladness = {self.gladness}")
         print(f"Progress ={round(self.progress, 2)}")
-        print(f"Money = {round(self.money, 2)}")
+
 
     def live(self, day):
         day = "Day" + str(day) + "of" + self.name + "life"
@@ -56,9 +53,7 @@ class Student:
             self.to_chill()
         self.end_of_day()
         self.is_alive()
-        if self.money < 100:
-            print("Go to work")
-            self.to_work()
+
 
 
 # ==============================================
